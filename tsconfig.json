@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    // ── Target & Module ──────────────────────────────────────────────────────
+    "target": "ES2022",
+    "module": "Preserve",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022"],
+
+    // ── Emit (typecheck only — tsup handles actual emit) ──────────────────────
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+
+    // ── Module interop ───────────────────────────────────────────────────────
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    // ── Type Safety (strict + beyond) ────────────────────────────────────────
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+
+    // ── Code Quality ─────────────────────────────────────────────────────────
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    // ── Performance & Correctness ────────────────────────────────────────────
+    "skipLibCheck": true,
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
+
+    // ── Compatibility ────────────────────────────────────────────────────────
+    // tsup v8 sets baseUrl internally; silences the TS6 deprecation warning
+    // until tsup ships a fix. Remove once tsup is updated.
+    "ignoreDeprecations": "6.0"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
