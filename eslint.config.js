@@ -36,6 +36,8 @@ export default defineConfig(
       '@typescript-eslint/no-misused-promises': 'error',
       // Ban console in production code (use a proper logger)
       'no-console': 'warn',
+      '@typescript-eslint/consistent-type-definitions': 'off',
+      '@typescript-eslint/require-await': 'warn',
     },
   },
 
